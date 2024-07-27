@@ -27,11 +27,11 @@ Neste curso, adquiri diversas habilidades e conhecimentos práticos, incluindo:
 
 Para configurar e rodar o projeto, siga os passos abaixo:
 
-1. **Instalar dependências**:
+1. **Instalar dependências em casa projeto (NestJS e React)**:
    ```bash
    yarn install
 
-2. **Iniciar os projetos**:
+2. **Iniciar os projetos (na raiz)**:
     ```bash
     sh run.sh
 
