@@ -27,15 +27,9 @@ Neste curso, adquiri diversas habilidades e conhecimentos práticos, incluindo:
 
 Para configurar e rodar o projeto, siga os passos abaixo:
 
-1. **Instalar dependências em cada projeto (NestJS e React)**:
+1. **Rodar o docker-compose na raiz do projeto**:
    ```bash
-   yarn install
-
-2. **Iniciar os projetos (na raiz)**:
-    ```bash
-    sh run.sh
-
-
+   docker-compose up --build -d
 ## Descrição do Curso
 
 O curso "React e TypeScript" oferecido pela Udemy abrange desde os conceitos básicos até avançados do desenvolvimento com React e TypeScript. Durante o curso, os seguintes tópicos foram abordados:

@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  nestjs:
+    build:
+      context: ./nestjs-wallet
+    ports:
+      - "2500:2500"
+    volumes:
+      - ./nestjs-wallet:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      NODE_ENV: development
+
+  react:
+    build:
+      context: ./react-wallet
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./react-wallet:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      NODE_ENV: development
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - nestjs
+      - react
